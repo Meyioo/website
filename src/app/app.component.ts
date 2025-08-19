@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 interface ContactFormData {
   firstName: string;
@@ -19,13 +20,13 @@ interface SubmitStatus {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, FooterComponent, NavigationComponent],
+  imports: [FormsModule, FooterComponent, NavigationComponent, StepperComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'my-angular-app';
-
+  
   contactFormData: ContactFormData = {
     firstName: '',
     lastName: '',

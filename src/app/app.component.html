@@ -1,7 +1,7 @@
 <div
-  class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col"
+  class="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex flex-col"
 >
-  <app-navigation></app-navigation>
+  <app-stepper></app-stepper>
 
   <!-- Main Content -->
   <main class="flex-1 flex flex-col items-center justify-center p-4">
@@ -10,7 +10,9 @@
       class="text-center h-screen flex flex-col items-center justify-center"
     >
       <img src="profile.png" class="h-96 bg-cover bg-center" />
-      <h1 class="text-4xl font-bold">Hello, I'm Tim Meyerhoff</h1>
+      <h1 class="text-4xl font-bold text-midnight-blue-950">
+        Hello, I'm Tim Meyerhoff
+      </h1>
       <p class="text-gray-600 mb-8">
         I'm a software engineer with a passion for building web applications.
       </p>
@@ -22,12 +24,12 @@
           href="https://www.linkedin.com/in/tim-meyerhoff/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-600 hover:text-blue-600 transition-colors duration-200 group"
+          class="text-gray-600 hover:text-primary-200 transition-colors duration-200 group"
           aria-label="LinkedIn Profile"
         >
           <div class="flex flex-col items-center space-y-2">
             <div
-              class="w-12 h-12 bg-gray-100 hover:bg-blue-100 rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110"
+              class="w-12 h-12 bg-gray-100 hover:bg-primary-100 rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110"
             >
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -143,7 +145,7 @@
                 name="firstName"
                 [(ngModel)]="contactFormData.firstName"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-transparent transition-all duration-200"
                 placeholder="Your first name"
               />
             </div>
@@ -161,7 +163,7 @@
                 name="lastName"
                 [(ngModel)]="contactFormData.lastName"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-transparent transition-all duration-200"
                 placeholder="Your last name"
               />
             </div>
@@ -180,7 +182,7 @@
               name="email"
               [(ngModel)]="contactFormData.email"
               required
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-transparent transition-all duration-200"
               placeholder="your.email@example.com"
             />
           </div>
@@ -197,7 +199,7 @@
               name="subject"
               [(ngModel)]="contactFormData.subject"
               required
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-transparent transition-all duration-200"
             >
               <option value="">Select a subject</option>
               <option value="collaboration">Collaboration Opportunity</option>
@@ -221,7 +223,7 @@
               [(ngModel)]="contactFormData.message"
               required
               rows="5"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-transparent transition-all duration-200 resize-none"
               placeholder="Tell me about your project or how I can help you..."
             ></textarea>
           </div>
@@ -230,7 +232,7 @@
             <button
               type="submit"
               [disabled]="isSubmitting"
-              class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="px-8 py-3 bg-primary-200 text-white font-medium rounded-lg hover:bg-primary-300 focus:ring-4 focus:ring-primary-100 focus:outline-none transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               @if (isSubmitting) {
               <span class="flex items-center">

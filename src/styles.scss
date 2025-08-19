@@ -1,1 +1,75 @@
-@use "tailwindcss";
+@import "tailwindcss";
+
+@theme {
+  --color-cobalt-50: #ebf8ff;
+  --color-cobalt-100: #d2f0ff;
+  --color-cobalt-200: #afe6ff;
+  --color-cobalt-300: #78d8ff;
+  --color-cobalt-400: #38c0ff;
+  --color-cobalt-500: #0b9cff;
+  --color-cobalt-600: #0078ff;
+  --color-cobalt-700: #005fff;
+  --color-cobalt-800: #004dd5;
+  --color-cobalt-900: #0245a3;
+  --color-cobalt-950: #072b64;
+
+  --color-black-squeeze-50: #f2fcfc;
+  --color-black-squeeze-100: #d0f6f7;
+  --color-black-squeeze-200: #a1ebee;
+  --color-black-squeeze-300: #6bd5dd;
+  --color-black-squeeze-400: #3cb6c5;
+  --color-black-squeeze-500: #2399a9;
+  --color-black-squeeze-600: #197888;
+  --color-black-squeeze-700: #18606d;
+  --color-black-squeeze-800: #184c57;
+  --color-black-squeeze-900: #184249;
+  --color-black-squeeze-950: #08242b;
+
+  --color-denim-50: #ecf9ff;
+  --color-denim-100: #d4f1ff;
+  --color-denim-200: #b3e8ff;
+  --color-denim-300: #7fdbff;
+  --color-denim-400: #43c4ff;
+  --color-denim-500: #18a4ff;
+  --color-denim-600: #0083ff;
+  --color-denim-700: #006afb;
+  --color-denim-800: #035ad5;
+  --color-denim-900: #0a4b9e;
+  --color-denim-950: #0c2e5f;
+
+  --color-midnight-blue-50: #e9f9ff;
+  --color-midnight-blue-100: #cef1ff;
+  --color-midnight-blue-200: #a8e9ff;
+  --color-midnight-blue-300: #6ddfff;
+  --color-midnight-blue-400: #28c8ff;
+  --color-midnight-blue-500: #00a2ff;
+  --color-midnight-blue-600: #0078ff;
+  --color-midnight-blue-700: #005eff;
+  --color-midnight-blue-800: #004fe3;
+  --color-midnight-blue-900: #0049b1;
+  --color-midnight-blue-950: #013071;
+
+  --color-white-50: #ffffff;
+  --color-white-100: #efefef;
+  --color-white-200: #dcdcdc;
+  --color-white-300: #bdbdbd;
+  --color-white-400: #989898;
+  --color-white-500: #7c7c7c;
+  --color-white-600: #656565;
+  --color-white-700: #525252;
+  --color-white-800: #464646;
+  --color-white-900: #3d3d3d;
+  --color-white-950: #292929;
+
+  --color-jagged-ice-50: #effcfc;
+  --color-jagged-ice-100: #c9f2f2;
+  --color-jagged-ice-200: #b5ecec;
+  --color-jagged-ice-300: #81dcdf;
+  --color-jagged-ice-400: #47c3c9;
+  --color-jagged-ice-500: #2ba7af;
+  --color-jagged-ice-600: #278793;
+  --color-jagged-ice-700: #266e78;
+  --color-jagged-ice-800: #265a64;
+  --color-jagged-ice-900: #244c55;
+  --color-jagged-ice-950: #133139;
+}
