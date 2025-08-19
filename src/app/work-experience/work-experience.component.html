@@ -1,0 +1,21 @@
+<section
+  id="work-experience"
+  class="w-full flex flex-col items-center justify-center h-screen relative"
+>
+  <h2 class="text-4xl font-bold">Work Experience</h2>
+
+  <div
+    class="flex flex-col items-center justify-center w-full max-w-6xl relative timeline-container"
+  >
+    <div class="flex flex-col items-center justify-center w-full">
+      @for (experience of workExperiences; track experience.title; let i =
+      $index) {
+      <app-work-experience-card
+        [experience]="experience"
+        [isRightAligned]="i % 2 === 0"
+        [year]="getYearFromPeriod(experience.period)"
+      ></app-work-experience-card>
+      }
+    </div>
+  </div>
+</section>

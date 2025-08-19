@@ -1,0 +1,46 @@
+// Timeline styling enhancements
+.timeline-node {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(3, 90, 213, 0.4);
+  }
+}
+
+// Ensure proper spacing for timeline elements
+.timeline-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      rgba(3, 90, 213, 0.6) 0%,
+      rgba(3, 90, 213, 0.8) 50%,
+      rgba(3, 90, 213, 0.6) 100%
+    );
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 2rem;
+  }
+
+  .timeline-node {
+    left: 2rem !important;
+  }
+
+  .year-label {
+    left: 2rem !important;
+  }
+}
