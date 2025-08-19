@@ -1,10 +1,6 @@
 <div class="mb-16 flex">
   <!-- Year Label -->
-  <div
-    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-2 bg-primary-200 text-sm font-semibold px-3 py-1 rounded-full shadow-md z-20 year-label"
-  >
-    {{ year }}
-  </div>
+  <app-year-label [year]="year"></app-year-label>
 
   <!-- Card -->
   <div

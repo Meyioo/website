@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { YearLabelComponent } from '../year-label/year-label.component';
 
 interface WorkExperience {
   title: string;
@@ -11,7 +12,7 @@ interface WorkExperience {
 @Component({
   selector: 'app-work-experience-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, YearLabelComponent],
   templateUrl: './work-experience-card.component.html',
   styleUrl: './work-experience-card.component.scss',
 })
