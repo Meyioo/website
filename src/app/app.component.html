@@ -1,15 +1,22 @@
 <div
   class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col"
 >
+  <nav class="bg-gray-800 text-white py-8 mt-auto">
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+    </ul>
+  </nav>
+
   <!-- Main Content -->
   <main class="flex-1 flex items-center justify-center p-4">
     <div class="text-center">
-      <app-profile-picture
-        size="xl"
-        imageSrc="profile.png"
-        altText="Profile picture"
-        class="rounded-full"
-      ></app-profile-picture>
+      <img src="profile.png" class="h-96 bg-cover bg-center" />
+      <h1 class="text-4xl font-bold">Hello, I'm Tim Meyerhoff</h1>
+      <p class="text-gray-600">
+        I'm a software engineer with a passion for building web applications.
+      </p>
     </div>
   </main>
 
