@@ -1,8 +1,1 @@
-.year-label {
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(3, 90, 213, 0.3);
-  }
-}
+// All year-label styling has been moved to Tailwind classes in the HTML template
