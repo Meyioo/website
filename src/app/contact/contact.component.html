@@ -1,0 +1,159 @@
+<section
+  id="contact"
+  class="flex h-dvh w-full flex-col items-center justify-center"
+>
+  <div class="mx-auto w-full max-w-2xl px-6">
+    <h2 class="mb-8 text-center text-4xl font-bold text-gray-800">
+      Get In Touch
+    </h2>
+    <p class="mb-8 text-center text-gray-600">
+      I'd love to hear from you! Feel free to reach out for collaborations,
+      opportunities, or just to say hello.
+    </p>
+
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-6">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div>
+          <label
+            for="firstName"
+            class="mb-2 block text-sm font-medium text-gray-700"
+          >
+            First Name *
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            [(ngModel)]="contactFormData.firstName"
+            required
+            class="focus:ring-primary-200 w-full rounded-lg border border-gray-300 px-4 py-3 transition-all duration-200 focus:border-transparent focus:ring-2"
+            placeholder="Your first name"
+          />
+        </div>
+
+        <div>
+          <label
+            for="lastName"
+            class="mb-2 block text-sm font-medium text-gray-700"
+          >
+            Last Name *
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            [(ngModel)]="contactFormData.lastName"
+            required
+            class="focus:ring-primary-200 w-full rounded-lg border border-gray-300 px-4 py-3 transition-all duration-200 focus:border-transparent focus:ring-2"
+            placeholder="Your last name"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="mb-2 block text-sm font-medium text-gray-700">
+          Email Address *
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="contactFormData.email"
+          required
+          class="focus:ring-primary-200 w-full rounded-lg border border-gray-300 px-4 py-3 transition-all duration-200 focus:border-transparent focus:ring-2"
+          placeholder="your.email@example.com"
+        />
+      </div>
+
+      <div>
+        <label
+          for="subject"
+          class="mb-2 block text-sm font-medium text-gray-700"
+        >
+          Subject *
+        </label>
+        <select
+          id="subject"
+          name="subject"
+          [(ngModel)]="contactFormData.subject"
+          required
+          class="focus:ring-primary-200 w-full rounded-lg border border-gray-300 px-4 py-3 transition-all duration-200 focus:border-transparent focus:ring-2"
+        >
+          <option value="">Select a subject</option>
+          <option value="collaboration">Collaboration Opportunity</option>
+          <option value="job">Job Opportunity</option>
+          <option value="freelance">Freelance Project</option>
+          <option value="question">General Question</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label
+          for="message"
+          class="mb-2 block text-sm font-medium text-gray-700"
+        >
+          Message *
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          [(ngModel)]="contactFormData.message"
+          required
+          rows="5"
+          class="focus:ring-primary-200 w-full resize-none rounded-lg border border-gray-300 px-4 py-3 transition-all duration-200 focus:border-transparent focus:ring-2"
+          placeholder="Tell me about your project or how I can help you..."
+        ></textarea>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <button
+          type="submit"
+          [disabled]="isSubmitting"
+          class="bg-primary-200 hover:bg-primary-300 focus:ring-primary-100 rounded-lg px-8 py-3 font-medium text-white transition-all duration-200 focus:ring-4 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          @if (isSubmitting) {
+            <span class="flex items-center">
+              <svg
+                class="mr-3 -ml-1 h-5 w-5 animate-spin text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Sending...
+            </span>
+          } @else {
+            Send Message
+          }
+        </button>
+      </div>
+    </form>
+
+    @if (submitStatus) {
+      <div
+        class="mt-6 rounded-lg p-4 text-center"
+        [class]="
+          submitStatus.success
+            ? 'bg-green-100 text-green-800'
+            : 'bg-red-100 text-red-800'
+        "
+      >
+        {{ submitStatus.message }}
+      </div>
+    }
+  </div>
+</section>
