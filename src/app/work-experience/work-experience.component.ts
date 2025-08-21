@@ -22,13 +22,15 @@ interface WorkExperience {
 export class WorkExperienceComponent {
   workExperiences: WorkExperience[] = [
     {
-      title: 'Senior Software Engineer',
-      company: 'Tech Company Inc.',
-      period: 'Jan 2020 – Present',
+      title: 'Senior Fullstack Developer | Green IT Lead',
+      company: 'Digital Venture Consultants',
+      period: 'August 2022 – October 2025',
       responsibilities: [
-        'Lead development of scalable web applications using Angular and TypeScript.',
-        'Collaborated with cross-functional teams to deliver high-quality products on schedule.',
-        'Mentored junior developers and conducted code reviews to ensure best practices.',
+        'Preparation and delivery of internal Green Software trainings',
+        'Green Software success stories: Identify project references within ongoing projects that contribute to reducing the resource consumption of software. Measure the energy demand of software (components) before and after optimization. Work with project teams to develop use cases and prepare CO₂ data for executive management and customers.',
+        'Goal: Make sustainable software solutions tangible and demonstrate their positive impact on both the environment and the economy.',
+        'Supervision of an academic thesis as a subject-matter advisor for a student focusing on Green Software (measurement / use cases).',
+        'Execution of customer projects in the form of requirements analyses, (software architecture), and development of (cloud-based) applications in the backend and/or frontend.',
       ],
     },
     {

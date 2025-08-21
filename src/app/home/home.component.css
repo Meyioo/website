@@ -2,20 +2,17 @@ img {
   clip-path: circle(44% at 49% 50%);
 }
 
-// Ensure smooth transitions on all interactive elements
 a,
 button {
   transition: all 0.2s ease-in-out;
 }
 
-// Focus states for accessibility
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-// Responsive text sizing
 @media (max-width: 768px) {
   .text-4xl {
     font-size: 2rem;
