@@ -1,28 +1,22 @@
 <section
   id="home"
-  class="flex-column flex h-dvh items-center justify-center shadow-md before:absolute before:inset-0 before:-z-10 before:bg-[url('/img/abstract-bg-1.webp')] before:bg-cover before:bg-center before:p-4 before:text-center before:opacity-8 before:content-['']"
+  class="flex-column flex h-dvh items-center justify-center gap-5 p-52 before:absolute before:inset-0 before:-z-0 before:bg-[url('/img/abstract-bg-1.webp')] before:bg-cover before:bg-center before:p-4 before:text-center before:opacity-8 before:content-['']"
 >
-  <div class="flex flex-col items-center justify-center text-start">
-    <h1 class="text-start text-4xl font-bold text-midnight-blue-950">
+  <div class="flex flex-col gap-5">
+    <h1
+      id="typewriter"
+      class="text-start text-6xl font-bold text-midnight-blue-950"
+    >
       Hi, I'm Tim
     </h1>
     <p class="text-gray-600">
       I'm a software engineer with a passion for building web applications.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quo
+      impedit, distinctio sunt repellat odio. Numquam sed officiis et rem,
+      expedita ex. Ex, in? Tenetur similique iste nulla accusamus natus!
     </p>
-  </div>
-
-  <div class="relative z-10 flex flex-col items-center justify-center">
-    <img src="profile.png" class="mb-3 w-96" />
-
-    <h1 class="text-4xl font-bold text-midnight-blue-950">
-      Hello, I'm Tim Meyerhoff
-    </h1>
-    <p class="mb-3 text-gray-600">
-      I'm a software engineer with a passion for building web applications.
-    </p>
-
     <!-- Social Media Links -->
-    <div class="flex justify-center space-x-6">
+    <div class="flex space-x-6">
       <!-- LinkedIn -->
       <a
         href="https://www.linkedin.com/in/tim-meyerhoff/"
@@ -89,5 +83,12 @@
         </div>
       </a>
     </div>
+  </div>
+
+  <div class="relative flex flex-col">
+    <img src="profile.png" class="z-1 rounded-xl" />
+    <div
+      class="absolute top-5 left-5 h-full w-full rounded-xl bg-midnight-blue-950"
+    ></div>
   </div>
 </section>
