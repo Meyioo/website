@@ -8,7 +8,7 @@ describe('DataProtectionComponent', () => {
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [DataProtectionComponent],
+      imports: [DataProtectionComponent],
     }).compileComponents();
   }));
 

@@ -2,14 +2,12 @@ import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 
-describe('HomeComponentComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(fakeAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [HomeComponent],
-    }).compileComponents();
+    TestBed.configureTestingModule({}).compileComponents();
   }));
 
   beforeEach(() => {
