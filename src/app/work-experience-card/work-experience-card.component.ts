@@ -18,6 +18,6 @@ interface WorkExperience {
 })
 export class WorkExperienceCardComponent {
   @Input() experience!: WorkExperience;
-  @Input() isRightAligned: boolean = false;
-  @Input() year: string = '';
+  @Input() isRightAligned = false;
+  @Input() year = '';
 }

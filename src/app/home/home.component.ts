@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, Component, inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
   standalone: true,
 })
 export class HomeComponent implements AfterViewInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  private platformId = inject(PLATFORM_ID);
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {

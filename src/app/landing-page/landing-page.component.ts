@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
@@ -8,8 +8,4 @@ import { HomeComponent } from '../home/home.component';
   standalone: true,
   imports: [HomeComponent],
 })
-export class LandingPageComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class LandingPageComponent {}

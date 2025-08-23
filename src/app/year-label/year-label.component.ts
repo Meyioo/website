@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './year-label.component.scss',
 })
 export class YearLabelComponent {
-  @Input() year: string = '';
+  @Input() year = '';
 }

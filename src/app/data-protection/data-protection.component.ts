@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-data-protection',
@@ -6,8 +6,4 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-protection.component.scss'],
   standalone: true,
 })
-export class DataProtectionComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class DataProtectionComponent {}
