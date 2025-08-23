@@ -1,20 +1,11 @@
 import { Component } from '@angular/core';
-import { ContactComponent } from './contact/contact.component';
-import { EducationComponent } from './education/education.component';
+import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    ContactComponent,
-    EducationComponent,
-    FooterComponent,
-    HomeComponent,
-    WorkExperienceComponent,
-  ],
+  imports: [FooterComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

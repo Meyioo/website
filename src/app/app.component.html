@@ -1,13 +1,10 @@
 <header
   id="header"
-  class="fixed top-0 right-0 left-0 z-50 flex items-center bg-white shadow-md"
+  class="top-0 right-0 left-0 bg-white shadow-md fixed z-50 flex items-center"
 ></header>
 
-<main class="flex flex-col bg-white">
-  <app-home></app-home>
-  <app-work-experience></app-work-experience>
-  <app-education></app-education>
-  <app-contact></app-contact>
+<main class="bg-white flex flex-col">
+  <router-outlet></router-outlet>
 </main>
 
 <app-footer></app-footer>
