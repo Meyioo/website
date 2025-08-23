@@ -2,7 +2,7 @@ name: S3 Deploy
 on:
   push:
     branches:
-      - master
+      - s3
 
 jobs:
   build:
@@ -41,12 +41,3 @@ jobs:
             --recursive \
             --region ap-northeast-2 \
             dist s3://github-action-angular-build-tutorial
-
-      - name: Notification
-        uses: 8398a7/action-slack@v2.6.0
-        with:
-          status: ${{ job.status }}
-          author_name: Github Actions
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
