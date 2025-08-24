@@ -2,7 +2,7 @@ name: S3 Deploy
 on:
   push:
     branches:
-      - master
+      - s3
 
 jobs:
   build:
@@ -32,21 +32,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@main
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: Deploy
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
             dist s3://github-action-angular-build-tutorial
-
-      - name: Notification
-        uses: 8398a7/action-slack@v2.6.0
-        with:
-          status: ${{ job.status }}
-          author_name: Github Actions
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
