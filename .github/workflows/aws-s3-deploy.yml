@@ -2,7 +2,7 @@ name: S3 Deploy
 on:
   push:
     branches:
-      - s3
+      - master
 
 jobs:
   build:
@@ -37,6 +37,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
 
       - name: Deploy
         run: |
